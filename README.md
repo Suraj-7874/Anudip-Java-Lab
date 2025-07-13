@@ -80,11 +80,18 @@ java com.anudip.bean.Main
 -This repository serves as a reference and practice base for mastering Java fundamentals like:
 
 -Classes and Objects
+
 -Packages and Access Modifiers
+
 -Method Overloading
+
 -Bean Classes
+
 -Ternary and Relational Operators
+
 -Conditional Statements & Loops
+
+---
 
 ** Clone this repo :**
 ```bash
