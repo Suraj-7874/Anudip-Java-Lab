@@ -39,7 +39,7 @@ Anudip_Lab_Assignments/
 ├── Session_5/
 │   └── Rectangle.java
 ```
-
+---
 ▶ **Compilation & Execution (via Terminal)** :-
 ```bash
 javac ProgramName.java
@@ -49,13 +49,14 @@ To run a Java program:
 java ProgramName.java
 ```
 
-**⚠️ Notes and Troubleshooting :-**
+⚠️ Notes and Troubleshooting :-
+---
 
 Session_2/Employee.java
 ---
 
 -Problem: Assigning decimal to int → emp.age = 35.5;
-
+---
 Session_2/Person.java (Package Example)
 
 ```bash
@@ -93,7 +94,7 @@ java com.anudip.bean.Main
 
 ---
 
-** Clone this repo :**
+ Clone this repo :
 ```bash
 git clone https://github.com/<your-username>/Anudip-java-Lab.git
 ```
