@@ -48,13 +48,13 @@ To run a Java program:
 ```bash
 java ProgramName.java
 ```
-**⚠️ Notes and Troubleshooting :-**
+**⚠️ Notes and Troubleshooting :- **
 ---
-**
-Session_2/Employee.java**
+Session_2/Employee.java
 ---
-
+```bash
 -Problem: Assigning decimal to int → emp.age = 35.5;
+```
 ---
 Session_2/Person.java (Package Example)
 
