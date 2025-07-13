@@ -48,7 +48,7 @@ To run a Java program:
 ```bash
 java ProgramName.java
 ```
-**⚠️ Notes and Troubleshooting :- **
+⚠️ Notes and Troubleshooting :- 
 ---
 Session_2/Employee.java
 ---
