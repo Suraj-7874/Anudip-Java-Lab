@@ -52,9 +52,12 @@ java ProgramName.java
 **⚠️ Notes and Troubleshooting :-**
 
 Session_2/Employee.java
-Problem: Assigning decimal to int → emp.age = 35.5;
+---
+
+-Problem: Assigning decimal to int → emp.age = 35.5;
 
 Session_2/Person.java (Package Example)
+
 ```bash
 javac com/anudip/learning/Person.java
 ```
@@ -70,18 +73,20 @@ To run a Java program:
 ```bash
 java com.anudip.bean.Main
 ```
+
 **Purpose** :-
+---
 
-This repository serves as a reference and practice base for mastering Java fundamentals like:
+-This repository serves as a reference and practice base for mastering Java fundamentals like:
 
-Classes and Objects
-Packages and Access Modifiers
-Method Overloading
-Bean Classes
-Ternary and Relational Operators
-Conditional Statements & Loops
+-Classes and Objects
+-Packages and Access Modifiers
+-Method Overloading
+-Bean Classes
+-Ternary and Relational Operators
+-Conditional Statements & Loops
 
-** Clone this repo:**
+** Clone this repo :**
 ```bash
 git clone https://github.com/<your-username>/Anudip-java-Lab.git
 ```
