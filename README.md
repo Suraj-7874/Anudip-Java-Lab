@@ -27,9 +27,7 @@ Anudip_Lab_Assignments/
 │
 ├── Session_3/
 │   ├── Calculator.java
-│   ├── Car.java
-│   ├── Bean/
-│   │   └── Main.java
+│   ├── Car.java  
 │   └── com/
 │       └── anudip/
 │           └── bean/
