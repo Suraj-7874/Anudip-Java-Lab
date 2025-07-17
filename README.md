@@ -8,9 +8,7 @@ Java assignments and practice programs for Anudip Foundation's **"Programming in
 Anudip_Lab_Assignments/
 │
 ├── Regular_Assignment/
-│   ├── StudentInfo.java
-│   └── Suraj_Restaurant.java
-│   └── SwapDemo.java
+│   ├── Inheritance (Example )
 │
 ├── Session_1/
 │   ├── Cal_InternetBill.java
