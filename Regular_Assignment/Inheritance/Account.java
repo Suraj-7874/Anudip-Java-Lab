@@ -2,7 +2,7 @@ public class Account extends Registration {
   int c, s, f = 0;
 
   public void Account_type() {
-    if (login || new_create) {
+    if (login) {
       System.out.println("1. Current \n2. Saving \n3. FD");
       System.out.print("Enter your Account type (1/2/3): ");
       type = sc.nextInt();
