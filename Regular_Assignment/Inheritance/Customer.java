@@ -11,11 +11,11 @@ public class Customer extends Transcation {
       System.out.println("Mobile linked Addar card number =" + Addar_no);
       System.out.println("Pan card number = \t" +                  pancard);
       if (c == 1) {
-        System.out.println("Account type :-     Current");
+        System.out.println("Account type :-\t     Current");
       } else if (s == 1) {
-        System.out.println("Account Type t:-    Saving");
+        System.out.println("Account Type :-\t   Saving");
       } else {
-        System.out.println("Account Type :-     Fix Deposite");
+        System.out.println("Account Type :-\t    Fix Deposite");
       }
       System.out.println("Total Balance:- \t" + min_balance);
       System.out.println("-------------------------------------------");
