@@ -1,7 +1,6 @@
 public class Registration extends Bank {
   boolean login = false;
-  boolean new_create = false;
-
+  
   public void UserCheck() {
     do {
 
@@ -65,17 +64,17 @@ public class Registration extends Bank {
             if (newPassword == confirmPassword) {
               password = newPassword;
               System.out.println("\nDear " + New_user + " , your Online Bank Account is Created and login Successfully :) \n");
-              new_create = true;
+              login = true;
             } else {
               System.out.println("\nPassword not match re-enter !!");
             }
 
-          } while (new_create != true);
+          } while (login != true);
         } else {
           System.out.println("\nProcess Terminated ");
         }
       }
-    } while (new_create != true && login != true);
+    } while ( login != true);
 
   }
 
