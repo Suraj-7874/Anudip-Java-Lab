@@ -1,6 +1,7 @@
 public class Registration extends Bank {
   boolean login = false;
-  
+ 
+
   public void UserCheck() {
     do {
 
@@ -30,7 +31,7 @@ public class Registration extends Bank {
       } else {
         System.out.println("\nPlease create new account :- \n");
 
-        System.out.print("Note :- Fill The information According To The Passbook");
+        System.out.print("Note :- Fill The information According To The Passbook\n");
 
         System.out.print("\nEnter the account holder name :-  ");
         New_user = sc.nextLine();
@@ -38,17 +39,23 @@ public class Registration extends Bank {
         System.out.print("\nEnter your Account number: ");
         New_accNo = sc.nextInt();
         account_no = New_accNo;
+        sc.nextLine(); 
+
         System.out.print("\nEnter phone number :-");
         new_phoneNO = sc.nextLong();
         phoneNumber =new_phoneNO;
+        sc.nextLine();
+
         System.out.print("\nEnter Mobile linked Addare card number :-");
         new_addar = sc.nextLong();
         Addar_no = new_addar;
+        sc.nextLine(); 
+
         System.out.print("\nEnter your Pancard number : ");
         new_pan = sc.nextLine();
         pancard = new_pan;
         sc.nextLine();
-        System.out.print("\nEnter your Address : ");
+        System.out.print("Enter your Address : ");
         new_address = sc.nextLine();
         Address = new_address;
 
