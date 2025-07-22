@@ -9,6 +9,7 @@ Anudip_Lab_Assignments/
 │
 ├── Regular_Assignment/
 │   ├── Inheritance (Example )
+|   |__ Encapsulation (Example)
 │
 ├── Session_1/
 │   ├── Cal_InternetBill.java
