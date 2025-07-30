@@ -1,0 +1,121 @@
+https://github.com/Suraj-7874/Anudip-Java-Lab
+__________________________________________________________________________________________________
+import java.util.Scanner;
+
+public class Simple_Cal {
+    public static void main(String[] args) {
+        int choice;
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter the First number: ");
+            double no1 = sc.nextDouble();
+
+            System.out.print("Enter the Second number: ");
+            double no2 = sc.nextDouble();
+
+            do {
+                System.out.println("\n1. Add");
+                System.out.println("2. Subtract");
+                System.out.println("3. Multiply");
+                System.out.println("4. Divide");
+                System.out.println("5. Exit");
+                System.out.print("Enter your choice (1-5): ");
+                choice = sc.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        System.out.println("Addition: " + (no1 + no2));
+                        break;
+                    case 2:
+                        System.out.println("Subtraction: " + (no1 - no2));
+                        break;
+                    case 3:
+                        System.out.println("Multiplication: " + (no1 * no2));
+                        break;
+                    case 4:
+                        if (no2 == 0) {
+                            System.out.println("Error: Division by zero is not allowed.");
+                        } else {
+                            System.out.println("Division: " + (no1 / no2));
+                        }
+                        break;
+                    case 5:
+                        System.out.println("Exiting...");
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                        break;
+                }
+
+            } while (choice != 5);
+
+        } catch (Exception e) {
+            System.out.println("Error: Invalid input. Please enter numbers only.");
+        }
+
+       
+    }
+}
+__________________________________________________________________________________________________
+import java.util.Scanner;
+
+
+class InsufficientBalanceException extends Exception {
+    public InsufficientBalanceException(String message) {
+        super(message);
+    }
+}
+
+
+class BankAccount {
+    private double balance;
+
+    public BankAccount(double initialBalance) {
+        balance = initialBalance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+        System.out.println("Amount deposited: " + amount);
+    }
+
+    public void withdraw(double amount) throws InsufficientBalanceException {
+        if (amount > balance) {
+            throw new InsufficientBalanceException("Withdrawal failed! Insufficient balance.");
+        }
+        balance -= amount;
+        System.out.println("Amount withdrawn: " + amount);
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+
+public class Suraj_Bank {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        BankAccount account = new BankAccount(5000);  
+
+        System.out.println("Welcome.. ");
+        System.out.println("Current Balance: " + account.getBalance());
+
+        try {
+            System.out.print("Enter amount to deposit: ");
+            double depositAmount = sc.nextDouble();
+            account.deposit(depositAmount);
+
+            System.out.print("Enter amount to withdraw: ");
+            double withdrawAmount = sc.nextDouble();
+            account.withdraw(withdrawAmount);
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
+
+        System.out.println("Final Balance: " + account.getBalance());
+    }
+}
+__________________________________________________________________________________________________
