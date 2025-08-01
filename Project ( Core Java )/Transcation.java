@@ -11,7 +11,7 @@ public class Transcation extends Account {
 
         System.out
             .println("\n\n1. Deposit :- \n2. Withdraw :- \n3. Loan :- \n" + //
-                "5. Balance inquiries :- \n6. Exit :- ");
+                "4. Balance inquiries :- \n5. Exit :- ");
         System.out.print("Enter your choice (1/2/3/4/5) = ");
         choice = sc.nextInt();
 
