@@ -1,0 +1,205 @@
+================================================================================
+                    ONLINE BANKING SYSTEM - TEST DEMO
+================================================================================
+
+PROJECT OVERVIEW:
+This is a Java-based Online Banking System with the following features:
+- User registration and login
+- Account type selection (Current, Saving, Fixed Deposit)
+- Banking transactions (Deposit, Withdraw, Balance Inquiry)
+- Customer details display
+
+================================================================================
+CLASS STRUCTURE & INHERITANCE HIERARCHY:
+================================================================================
+
+Bank (Base Class)
+├── Registration (extends Bank)
+    ├── Account (extends Registration)
+        └── Transcation (extends Account)
+            └── Customer (extends Transcation)
+
+CLASS DETAILS:
+
+1. BANK CLASS:
+   - Contains basic user information (username, password, account details)
+   - Stores default values for testing
+   - Provides getter/setter methods for password and account number
+   - Default credentials: username="Suraj", password=123, account_no=123456789
+
+2. REGISTRATION CLASS:
+   - Handles user authentication and account creation
+   - UserCheck() method manages login/registration flow
+   - Supports both existing user login and new account creation
+
+3. ACCOUNT CLASS:
+   - Manages account type selection (Current/Saving/Fixed Deposit)
+   - Tracks account type with variables c, s, f
+
+4. TRANSACTION CLASS:
+   - Core banking operations (Deposit, Withdraw, Balance Inquiry)
+   - PIN verification for transactions
+   - Menu-driven interface for banking operations
+
+5. CUSTOMER CLASS:
+   - Displays customer details and account information
+   - Shows account type and balance
+
+6. ONLINE_BANKING CLASS:
+   - Main class that orchestrates the entire banking system
+   - Creates Customer object and executes the banking flow
+
+================================================================================
+DEFAULT TEST CREDENTIALS:
+================================================================================
+
+For Existing User Login:
+- Username: "Suraj"
+- Password: 123
+- Account Number: 123456789
+- Phone Number: 9011452576
+- Aadhar Number: 123412341234
+- PAN Card: "ABC12345SS"
+- Address: "Dighi pune 411015"
+
+================================================================================
+TEST SCENARIOS:
+================================================================================
+
+SCENARIO 1: EXISTING USER LOGIN
+1. Run the program
+2. Choose 'Y' when asked "You have an account (Y/N)"
+3. Enter username: "Suraj"
+4. Enter password: 123
+5. Enter account number: 123456789
+6. Select account type (1=Current, 2=Saving, 3=FD)
+7. Test banking operations
+
+SCENARIO 2: NEW USER REGISTRATION
+1. Run the program
+2. Choose 'N' when asked "You have an account (Y/N)"
+3. Fill in new user details:
+   - Account holder name
+   - Account number
+   - Phone number
+   - Aadhar number
+   - PAN card number
+   - Address
+4. Confirm minimum balance requirement (Y/N)
+5. Set and confirm password
+6. Select account type
+7. Test banking operations
+
+SCENARIO 3: BANKING OPERATIONS TEST
+After successful login/registration:
+1. Deposit Test:
+   - Choose option 1 (Deposit)
+   - Enter amount (e.g., 5000)
+   - Enter PIN (password)
+   - Verify balance update
+
+2. Withdrawal Test:
+   - Choose option 2 (Withdraw)
+   - Enter amount less than balance
+   - Enter PIN
+   - Verify balance deduction
+
+3. Balance Inquiry:
+   - Choose option 4
+   - Verify current balance display
+
+4. Invalid Operations Test:
+   - Try withdrawal with insufficient balance
+   - Enter wrong PIN
+   - Test invalid menu choices
+
+================================================================================
+PROGRAM FLOW:
+================================================================================
+
+1. Program starts with Online_Banking.main()
+2. Customer object is created
+3. UserCheck() - Authentication/Registration
+4. Account_type() - Account type selection
+5. Process() - Banking operations menu
+6. display() - Show customer details
+7. close() - Clean up resources
+
+================================================================================
+FEATURES & FUNCTIONALITY:
+================================================================================
+
+AUTHENTICATION:
+✓ User login with username, password, account number
+✓ New user registration with complete details
+✓ Password confirmation for new accounts
+✓ PIN verification for transactions
+
+ACCOUNT MANAGEMENT:
+✓ Three account types: Current, Saving, Fixed Deposit
+✓ Account type tracking
+✓ Minimum balance requirement (Rs. 2000)
+
+BANKING OPERATIONS:
+✓ Deposit money with PIN verification
+✓ Withdraw money with balance check and PIN verification
+✓ Balance inquiry
+✓ Loan application information (redirects to bank)
+
+SECURITY FEATURES:
+✓ PIN/password verification for transactions
+✓ Balance validation for withdrawals
+✓ Input validation for menu choices
+
+USER INTERFACE:
+✓ Menu-driven interface
+✓ Clear prompts and instructions
+✓ Error handling for invalid inputs
+✓ Customer details display
+
+================================================================================
+TESTING CHECKLIST:
+================================================================================
+
+□ Program compiles without errors
+□ Existing user login works with default credentials
+□ New user registration accepts all required fields
+□ Account type selection works for all three types
+□ Deposit operation updates balance correctly
+□ Withdrawal operation deducts amount correctly
+□ Insufficient balance withdrawal shows error message
+□ Wrong PIN shows error message
+□ Balance inquiry displays current balance
+□ Customer details display shows all information
+□ Program exits gracefully
+□ Scanner resources are properly closed
+
+================================================================================
+POTENTIAL IMPROVEMENTS:
+================================================================================
+
+1. Data Persistence: Store user data in files/database
+2. Transaction History: Track all deposits/withdrawals
+3. Multiple Accounts: Support for multiple accounts per user
+4. Interest Calculation: Add interest for savings/fixed deposits
+5. Transfer Functionality: Inter-account transfers
+6. Enhanced Security: Encrypted passwords, session management
+7. GUI Interface: Graphical user interface
+8. Input Validation: Better validation for phone numbers, PAN, etc.
+9. Error Handling: More robust exception handling
+10. Logging: Transaction logs and audit trails
+
+================================================================================
+TECHNICAL NOTES:
+================================================================================
+
+- Uses inheritance for code reuse and organization
+- Scanner object is shared across classes
+- Static variables track account types and login status
+- Basic input validation implemented
+- Exception handling in main method
+- Resource cleanup with Scanner.close()
+
+================================================================================
+END OF TEST DEMO
+================================================================================ 
