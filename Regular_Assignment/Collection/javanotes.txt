@@ -1,0 +1,72 @@
+Collection : - The Collection framework defines a set of interfaces and their implementations to 
+manipulate Collections, which serve as a container for a group of objects such as a 
+collection of mails. 
+ArrayList  :--- Implements dynamic array by extending AbstractList
+
+list.contains( ) = use for searching purpose .
+list.addAll( ); = use to copy one list to another . & list.containsAll =check all elements is some in both list .
+list_1.equals(list_2)) = equality . 
+list_1.isEmpty( ) = check list is empty or not  .
+list_1.size( )= check list size . form index 0 to n-1
+list_1.hashCode() = code of list in interger .
+list_1.remove() :- remove form index 0
+.retainAll(list_2) =print all elments
+list_1.removeAll(list_2); =remove all   && clear() :- same work
+
+vector  :- use Vector vector = new Vector(5);  vector.addElement(new Integer(0)); it requird data type and index  and
+ we can use conditions like  if(vector.contains(new Integer(3))) 
+			 System.out.println("Found 3");
+
+Stack is a subclass of Vector that implements a standard Last-In, First-Out (LIFO) stack .
+		Stack stack1 = new Stack(); 
+in that use push and pop operations . stack1.push(new Integer(0));  it is [ LIFO ] their for pop elements in last 
+Also use {  try { }catch(EmptyStackException e) }
+
+Methods for Queue: [ 
+poll()  : -Returns and removes the element at the front end of the container.
+remove()  : -Removes element at the head of the queue and throws
+		NoSuchElementException if queue is empty.
+peek()  : - Returns the element at the head of the queue without removing it. 
+	Returns null if queue is empty.
+element() Same as peek(), but throws NoSuchElementException if queue is empty.
+offer(E obj) Adds object to queue. This method is preferable to add() method since 
+this method does not throws an exception when the capacity of the 
+container is full since it returns false.
+
+Same as list : q.add("1");   Iterator itr=oqueue.iterator(); <----------- important Queue oqueue=new LinkedList();  
+while(itr.hasNext()) 
+ { 
+ String iteratorValue=(String)itr.next(); 							this structure is commanly used .
+ System.out.println("Queue Next Value:"+iteratorValue); 
+ } 
+ 
+The Comparator interface defines two methods i.e., compare( ) and equals( ).  : -
+Set : -  Set<String> st =new HashSet<String>( );                    (integer).st.first( ); same last
+Tree set = use for sorting .
+
+HashSet : - no double elements is allowed ,
+
+ LinkedHashSet hs = new LinkedHashSet(); :-  same data needed to add  < > no use 
+
+hash related mapping  requied put( ) no add use .
+
+listIterator =same use has.Next( ) and next( )  === for backward : - hasPrevious()  and previous( )
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------2 . Mutithreading .
+A task is completed by a program with the sequence of steps called process. Each 
+specific task in a process is called thread .
+ When there are multiple threads execute simultaneously, it is called multithreading
+By definition multitasking is when multiple processes share common processing 
+resources such as a CPU. 
+							|
+     		   Multitasking  				|			Multithreading
+1 .Multitasking let CPU to execute multiple tasks at the same time	|	1 . Multithreading let CPU to execute multiple
+							|	 threads of a process simultaneously.
+2 .A process is the smallest unit in multitasking.			|	2. A thread is the smallest unit in multi-threading
+3. Multitasking is when a single CPU performs several tasks   		|	3.Multithreading allows multiple threads of a single task 
+	(program, process, task, threads) at the same time 		|	(program, process) to be processed by CPU at the same time.
+4. Multitasking allocates separate memory and resources for    		|	4.multithreading threads belonging to the same process shares the 
+	 each process program   				|	    same memory and resources as that of the process.
+5. Multithreading is less costly than multitasking 			|	5. multitasking is more costly than Multithreading 
+6 . multitasking is slower as comparison to multithreading .		|	 6. Multithreading is fast in processing 
+--------------------------------------------------------------------------------------------------- |-----------------------------------------------------------------------------------
