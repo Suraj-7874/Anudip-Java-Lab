@@ -48,7 +48,7 @@ mysql> select * from person;
 +-------------+----------+
 
 mysql> create table passport (passport_id int primary key,person_id int unique,passport_number varchar(50),
-               FOREIGN KEY(person_id) REFERENCES person(person_id));
+               FOREIGN KEY(person_id) REFERENCES person(person_id)); 
 
 mysql> desc passport;
 +-------------------------+----------------+------+-----+----------+---------+
