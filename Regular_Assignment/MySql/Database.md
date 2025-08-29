@@ -190,7 +190,7 @@ mysql> select * from Student;
 |          1 | Suraj        |
 |          2 | Pravin       |
 |          3 | Anu          |
-|          4 | Meera        |
+|          4 | Mayur       |
 +------------+--------------+
 4 rows in set (0.00 sec)
 
