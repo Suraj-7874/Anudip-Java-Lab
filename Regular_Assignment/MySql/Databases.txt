@@ -1,3 +1,4 @@
+```bash
 mysql> create database if not exists Person;
 
 mysql> show databases;
@@ -68,3 +69,5 @@ mysql> select * from passport;
 |         103       |         3          | PASS3                       |
 |         104       |         4          | PASS4                       |
 +---------------+-------------+-----------------------+
+
+```
