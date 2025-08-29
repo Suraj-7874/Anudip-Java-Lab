@@ -1,1 +1,65 @@
-q
+ADD → Add column/constraint
+MODIFY → Change column type/size
+RENAME → Rename column or table
+DROP → Delete column/constraint
+
+mysql> use person;
+Database changed
+mysql> alter table person add age int;
+
+mysql> select * from person;
++-----------+--------+------+
+| person_id | name   | age  |
++-----------+--------+------+
+|         1 | Suraj  | NULL |
+|         2 | mayur  | NULL |
+|         3 | pravin | NULL |
+|         4 | pankaj | NULL |
++-----------+--------+------+
+
+
+mysql> alter table person modify age varchar(5);
+
+mysql> desc person;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| person_id | int         | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(55) | NO   |     | NULL    |                |
+| age       | varchar(5)  | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+mysql> alter table person rename column age to Student_age;
+
+mysql> desc person;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| person_id   | int         | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(55) | NO   |     | NULL    |                |
+| Student_age | varchar(5)  | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+
+mysql> alter table person add constraint unique_id unique (Student_age);
+
+mysql> desc person;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| person_id   | int         | NO   | PRI | NULL    | auto_increment |
+| name        | varchar(55) | NO   |     | NULL    |                |
+| Student_age | varchar(5)  | YES  | UNI | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+
+mysql> alter table person drop column Student_age;
+
+mysql> desc person;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| person_id | int         | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(55) | NO   |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
