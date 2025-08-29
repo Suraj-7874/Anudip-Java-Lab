@@ -1,4 +1,4 @@
-ONE TO ONE Relation table :-
+ONE TO ONE Relationship table :-
 ```bash
 mysql> create database if not exists Person;
 
@@ -74,3 +74,62 @@ mysql> select * from passport;
 
 
 ```
+ONE TO MANY Relationship :-
+```bash
+mysql> create database Department_emp;
+
+mysql> use Department_emp;
+Database changed.
+
+mysql> CREATE TABLE Department (
+    ->     dept_id INT PRIMARY KEY,
+    ->     dept_name VARCHAR(100)
+    -> );
+
+mysql> CREATE TABLE Employee (
+    ->     emp_id INT PRIMARY KEY,
+    ->     emp_name VARCHAR(100),
+    ->     dept_id INT,
+    ->     FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+    -> );
+
+mysql> INSERT INTO Department (dept_id, dept_name) VALUES
+    -> (1, 'HR'),
+    -> (2, 'IT'),
+    -> (3, 'Finance'),
+    -> (4, 'Marketing');
+
+mysql> INSERT INTO Employee (emp_id, emp_name, dept_id) VALUES
+    -> (101, 'Suraj', 1),   
+    -> (102, 'Mayur', 2),       
+    -> (103, 'Pankaj', 2),  
+    -> (104, 'Pravin', 3),     
+    -> (105, 'Om', 4),       
+    -> (106, 'Sai', 1);     
+
+
+mysql> select * from Department;
++---------+-----------+
+| dept_id | dept_name |
++---------+-----------+
+|       1 | HR        |
+|       2 | IT        |
+|       3 | Finance   |
+|       4 | Marketing |
++---------+-----------+
+mysql> select * from Employee;
++--------+----------+---------+
+| emp_id | emp_name | dept_id |
++--------+----------+---------+
+|    101 | Suraj    |       1 |
+|    102 | Mayur    |       2 |
+|    103 | Pankaj   |       2 |
+|    104 | Pravin   |       3 |
+|    105 | Om       |       4 |
+|    106 | Sai      |       1 |
++--------+----------+---------+
+
+
+
+```
+
