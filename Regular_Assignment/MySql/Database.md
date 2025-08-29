@@ -132,4 +132,91 @@ mysql> select * from Employee;
 
 
 ```
+Many-to-Many (M:N) Relationship :-
+```bash
+mysql> create database Student_course;
+
+mysql> use Student_course;
+Database changed
+
+mysql> CREATE TABLE Student (
+    ->     student_id INT PRIMARY KEY,
+    ->     student_name VARCHAR(100)
+    -> );
+
+
+mysql>
+mysql> CREATE TABLE Course (
+    ->     course_id INT PRIMARY KEY,
+    ->     course_name VARCHAR(100)
+    -> );
+
+
+mysql> CREATE TABLE StudentCourse (
+    ->     student_id INT,
+    ->     course_id INT,
+    ->     PRIMARY KEY (student_id, course_id),
+    ->     FOREIGN KEY (student_id) REFERENCES Student(student_id),
+    ->     FOREIGN KEY (course_id) REFERENCES Course(course_id)
+    -> );
+
+
+mysql> INSERT INTO Student (student_id, student_name) VALUES
+    -> (1, 'Suraj'),
+    -> (2, 'Pravin'),
+    -> (3, 'Anu'),
+    -> (4, 'Mayur');
+
+mysql> INSERT INTO Course (course_id, course_name) VALUES
+    -> (101, 'Database Systems'),
+    -> (102, 'Web Development'),
+    -> (103, 'Java Programming'),
+    -> (104, 'Data Structures');
+
+mysql> INSERT INTO StudentCourse (student_id, course_id) VALUES
+    -> (1, 101),
+    -> (1, 102),
+    -> (2, 102),
+    -> (2, 103),
+    -> (3, 101),
+    -> (3, 104),
+    -> (4, 103),
+    -> (4, 104);
+
+mysql> select * from Student;
++------------+--------------+
+| student_id | student_name |
++------------+--------------+
+|          1 | Suraj        |
+|          2 | Pravin       |
+|          3 | Anu          |
+|          4 | Meera        |
++------------+--------------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Course;
++-----------+------------------+
+| course_id | course_name      |
++-----------+------------------+
+|       101 | Database Systems |
+|       102 | Web Development  |
+|       103 | Java Programming |
+|       104 | Data Structures  |
++-----------+------------------+
+
+mysql> select * from StudentCourse;
++------------+-----------+
+| student_id | course_id |
++------------+-----------+
+|          1 |       101 |
+|          3 |       101 |
+|          1 |       102 |
+|          2 |       102 |
+|          2 |       103 |
+|          4 |       103 |
+|          3 |       104 |
+|          4 |       104 |
++------------+-----------+
+
+```
 
