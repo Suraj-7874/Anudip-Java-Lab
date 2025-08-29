@@ -1,1 +1,62 @@
-a
+ select * from person;
++-----------+--------+--------+
+| person_id | name   | Salary |
++-----------+--------+--------+
+|         1 | Suraj  | 20000  |
+|         2 | mayur  | 20000  |
+|         3 | pravin | 20000  |
+|         4 | pankaj | 20000  |
++-----------+--------+--------+
+
+
+mysql> select sum(salary) as total_salary
+    -> from person;
++--------------+
+| total_salary |
++--------------+
+|        80000 |
++--------------+
+
+
+mysql> select avg(salary) as avg_salary
+    -> from person;
++------------+
+| avg_salary |
++------------+
+|      20000 |
++------------+
+
+
+mysql> update person set salary="10000" where person_id=3;
+
+
+mysql> select * from person;
++-----------+--------+--------+
+| person_id | name   | Salary |
++-----------+--------+--------+
+|         1 | Suraj  | 20000  |
+|         2 | mayur  | 20000  |
+|         3 | pravin | 10000  |
+|         4 | pankaj | 20000  |
++-----------+--------+--------+
+
+
+mysql> update person set salary="30000" where person_id=1;
+
+
+mysql> select min(salary) as min_Salary
+    -> from person;
++------------+
+| min_Salary |
++------------+
+| 10000      |
++------------+
+
+mysql> select max(salary) as max_Salary
+    -> from person;
++------------+
+| max_Salary |
++------------+
+| 30000      |
++------------+
+
