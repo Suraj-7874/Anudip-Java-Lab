@@ -1,0 +1,91 @@
+ Customers Table:
+
+mysql> select * from customers;
++---------+------------+-----------+
+| cust_id | first_name | last_name |
++---------+------------+-----------+
+|       1 | Suraj      | surve     |
+|       2 | Pravin     | sukale    |
+|       3 | Mayur      | devkar    |
+|       4 | Pankaj     | chatter   |
+|       5 | Mahek      | jaswal    |
++---------+------------+-----------+
+
+ Orders Table:
+
+ mysql> select * from orders;
++----------+---------+-----------+--------------+------------+
+| order_id | cust_id | product   | total_amount | order_date |
++----------+---------+-----------+--------------+------------+
+|        1 |       1 | Laptop    |     49000.00 | 2025-04-05 |
+|        2 |       2 | Mobile    |     30000.00 | 2025-01-03 |
+|        3 |       3 | Headphone |       199.00 | 2025-04-11 |
+|        4 |       4 | tab       |     40000.00 | 2025-12-03 |
+|        5 |       5 | case      |        49.00 | 2025-01-05 |
++----------+---------+-----------+--------------+------------+
+============================================================================================================================================================================================
+Q1 .Write an SQL query to retrieve the first and last names of customers along with the
+ order date and total amount of their orders. Use an INNER JOIN to connect the two
+ tables.
+-->
+    -> select c.first_name,c.last_name,o.order_date,o.product,o.total_amount
+    -> from customers c
+    -> inner join orders o on c.cust_id = o.cust_id;
++------------+-----------+------------+-----------+--------------+
+| first_name | last_name | order_date | product   | total_amount |
++------------+-----------+------------+-----------+--------------+
+| Suraj      | surve     | 2025-04-05 | Laptop    |     49000.00 |
+| Pravin     | sukale    | 2025-01-03 | Mobile    |     30000.00 |
+| Mayur      | devkar    | 2025-04-11 | Headphone |       199.00 |
+| Pankaj     | chatter   | 2025-12-03 | tab       |     40000.00 |
+| Mahek      | jaswal    | 2025-01-05 | case      |        49.00 |
++------------+-----------+------------+-----------+--------------+
+
+============================================================================================================================================================================================
+
+ Departments Table :
+
+mysql> select * from department;
++---------+-----------+
+| dept_id | dept_name |
++---------+-----------+
+|       1 | HR        |
+|       2 | IT        |
+|       3 | Finance   |
+|       4 | Marketing |
++---------+-----------+
+
+ Employees Table :
+
+mysql> select * from employee;
++--------+------------+---------+-----------+
+| emp_id | first_name | dept_id | last_name |
++--------+------------+---------+-----------+
+|    101 | suraj      |       1 | surve     |
+|    102 | parvin     |       2 | sukale    |
+|    103 | mayur      |       2 | devkar    |
+|    104 | mahek      |       3 | jaswal    |
+|    105 | pream      |       4 | chavan    |
+|    106 | poonum     |       1 | kamble    |
++--------+------------+---------+-----------+
+============================================================================================================================================================================================
+
+Q2 . Write an SQL query to retrieve a list of all departments and the names of employees
+ who belong to each department. Use a LEFT JOIN to include departments that have no
+ employees
+   --> select d.dept_name,e.first_name,e.last_name
+    -> from department d
+    -> left join employee e on d.dept_id=e.dept_id;
++-----------+------------+-----------+
+| dept_name | first_name | last_name |
++-----------+------------+-----------+
+| HR        | suraj      | surve     |
+| HR        | poonum     | kamble    |
+| IT        | parvin     | sukale    |
+| IT        | mayur      | devkar    |
+| Finance   | mahek      | jaswal    |
+| Marketing | aunshka    | kamble    |
++-----------+------------+-----------+
+
+============================================================================================================================================================================================
+
