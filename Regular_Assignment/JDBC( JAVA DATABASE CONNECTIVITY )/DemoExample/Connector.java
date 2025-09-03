@@ -1,4 +1,4 @@
-package Connectionss;
+package DemoExmaple;
 
 import java.sql.*;
 import java.util.Scanner;
@@ -89,3 +89,4 @@ public class Connector {
 
 
 }
+
